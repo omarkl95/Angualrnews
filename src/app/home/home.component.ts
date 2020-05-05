@@ -16,6 +16,8 @@ export class HomeComponent implements OnInit {
   myDate = new Date();
 
   homeEmps:any={};
+  avatar:any;
+
 
   constructor(private route: ActivatedRoute ,
     private MyServiceService:MyServiceService) {
@@ -37,6 +39,8 @@ export class HomeComponent implements OnInit {
       .subscribe(
         data=>  {
           this.homeEmps = data['items'][id];
+           this.avatar= this.homeEmps['owner']['avatar_url']
+
         console.log(this.homeEmps);
         });
   }
