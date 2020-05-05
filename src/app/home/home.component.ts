@@ -28,15 +28,15 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
     this.route.params.subscribe(
       params => {
-        let id = params['id'];
+        let id = params['i'];
         if (id) this.getDetails(id);
       });
   }
   getDetails(id:number) {
-    this.MyServiceService.getNewsID()
+    this.MyServiceService.getNews()
       .subscribe(
         data=>  {
-          this.homeEmps = data['items']['id'];
+          this.homeEmps = data['items'][id];
         console.log(this.homeEmps);
         });
   }
