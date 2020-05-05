@@ -1,0 +1,56 @@
+
+
+<div class="container mt-5">
+
+    <div class="myContent mb-5">
+      <!-- <button class="btn btn-outline-primary" *ngFor="let countrt of AllCountries" (click)="ChangeCountry(countrt.code)" >  {{countrt.name}} </button> -->
+        <div class="row">
+          <div class="col-md-12 col-sm-6" >
+            <input [(ngModel)]="term" class="form-control  float-right">
+            <div class="clearfix"></div>
+
+          </div>
+        </div>
+      <br>
+
+
+    </div>
+  <div class="row">
+
+    <div class="col-md-4 col-sm-2" *ngFor="let post of galleyPosts | realSearch:term let i=index;">
+
+      <div class="item">
+
+          <div class="card" >
+              <!-- <img src="{{post.full_name}}" class="card-img-top" alt="..."> -->
+              <span>{{post.full_name}}</span>
+              <div class="card-body">
+                <h5 class="card-title">{{post.owner.avatar_url}}</h5>
+                <p class="card-text">{{post.description}}</p>
+                <p class="card-text">{{post.forks_count}}</p>
+                <p class="card-text">{{post.size}}</p>
+                <p class="card-text">{{post.language}}</p>
+
+
+                <a [routerLink]="['/home',i]" class="btn btn-primary">Read More</a>
+              </div>
+            </div>
+
+
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+  </div>
+
+
+
+
+
+</div>

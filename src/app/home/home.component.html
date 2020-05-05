@@ -1,0 +1,64 @@
+
+
+
+
+<div class="container text-center ">
+  <h1>REP Details</h1>
+
+<!--button (click)="ToggleTable()" class="btn btn-success">Click</button> -->
+
+<!-- else if -->
+<!-- *ngIf="homeEmps.length > 0 ; else test" -->
+  <table  class="table">
+   <thead class="text-primary">
+     <th>Id</th>
+    <th>Name</th>
+    <th>Owner</th>
+    <th>description</th>
+    <th> stargazers_count</th>
+    <th> forks_counts</th>
+    <th> size</th>
+    <th> Language</th>
+
+
+
+
+
+   </thead>
+
+   
+
+   <tbody>
+    <!-- *ngFor="let emp of homeEmps ; let i =index" -->
+    <tr >
+      
+      <td>{{homeEmps.id}}</td>
+      <td>{{homeEmps.full_name}} </td>
+      <td>{{homeEmps.name }}</td>
+      <td>{{homeEmps.description }}</td>
+      <td>{{homeEmps.stargazers_count}}</td>
+
+    </tr>
+
+   </tbody>
+
+
+
+
+
+
+
+  </table>
+
+
+  <ng-template #test>
+    <h1>there is no data to show</h1>
+  </ng-template>
+
+  <!-- <ng-template #hambozo>
+      <h1>there is no data to show</h1>
+    </ng-template> -->
+
+  
+
+</div>
